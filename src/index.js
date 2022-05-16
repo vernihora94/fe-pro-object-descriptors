@@ -10,9 +10,9 @@
  */
 export const getKeysByDescriptor = (object, descriptor) => {
     const arr = [];
-    const object = Object.getOwnPropertyDescriptors(object);
-    for (let key in object) {
-        if (object[key][descriptor] === true) {
+    const newObj = Object.getOwnPropertyDescriptors(object);
+    for (let key in newObj) {
+        if (newObj[key][descriptor] === true) {
             arr.push(key);
         }
     }
